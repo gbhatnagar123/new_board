@@ -166,8 +166,8 @@ def main():
         initial_sidebar_state='expanded'
         )
     
-    with open("/Users/gauravbhatnagar/Documents/Personal_projects/breast_cancer_board/assets/style.css") as f:
-       st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    #with open("/Users/gauravbhatnagar/Documents/Personal_projects/breast_cancer_board/assets/style.css") as f:
+       #st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     
     input_data = add_sidebar() 
     
