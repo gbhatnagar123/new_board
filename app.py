@@ -135,8 +135,8 @@ def get_radar_chart(input_data):
   return fig
 
 def add_predictions(input_data):
-   model = pickle.load(open("/Users/gauravbhatnagar/Documents/Personal_projects/breast_cancer_board/model.pkl", "rb"))
-   sc = pickle.load(open("/Users/gauravbhatnagar/Documents/Personal_projects/breast_cancer_board/sc.pkl", "rb"))
+   model = pickle.load(open("model.pkl", "rb"))
+   sc = pickle.load(open("sc.pkl", "rb"))
   
    input_array = np.array(list(input_data.values())).reshape(1, -1)
   
@@ -166,8 +166,8 @@ def main():
         initial_sidebar_state='expanded'
         )
     
-    #with open("/Users/gauravbhatnagar/Documents/Personal_projects/breast_cancer_board/assets/style.css") as f:
-       #st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    with open("style.css") as f:
+       st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     
     input_data = add_sidebar() 
     
